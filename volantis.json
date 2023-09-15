@@ -1,0 +1,35 @@
+{
+    "name": "volantis/gui",
+    "type": "package",
+    "description": "A library for theming and drawing themable GUI elements.",
+    "website": "https://volantis.dev",
+    "authors": [{
+        "name": "Ben McClure",
+        "email": "ben@volantisdev.com"
+    }],
+    "require": {
+        "volantis/common": "^1.0 || dev-main",
+        "volantis/installer": "^1.0 || dev-main"
+    },
+    "libraries": {
+        "Gui": {
+            "path": "lib/Gui",
+            "uses": [
+                "GdiPlus",
+                "ListViewConstants"
+            ]
+        },
+        "Theme": {
+            "path": "lib/Theme",
+            "uses": [
+                "Gui"
+            ]
+        },
+        "GdiPlus": {
+            "path": "lib/Gdip_All.ahk"
+        },
+        "ListViewConstants": {
+            "path": "lib/LV_Constants.ahk"
+        }
+    }
+}
