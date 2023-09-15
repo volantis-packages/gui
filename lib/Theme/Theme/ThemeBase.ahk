@@ -1,6 +1,7 @@
 class ThemeBase {
     themeId := ""
-    iconTheme := "Light"
+    iconTheme := "material-icons"
+    iconVariant := "light"
     name := ""
     themesDir := ""
     resourcesDir := ""
@@ -82,7 +83,7 @@ class ThemeBase {
         exts := [".ico", ".png", ".jpg", ".bmp"]
 
         path := ""
-        basePath := this.resourcesDir . "\graphics\icons\" . this.iconTheme . "\" . name
+        basePath := this.resourcesDir . "\graphics\icons\" . this.iconTheme . "\" . this.iconVariant . "\" . name
 
         for index, ext in exts {
             if (FileExist(basePath . ext)) {
